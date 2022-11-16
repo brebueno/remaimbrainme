@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="PT-BR">
+
+<head>
+  <title>
+      Cadastro
+  </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+ <!--Css Da pag -->
+ <link rel="stylesheet" href="{{ url('/cadastro') }}/cadastro.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-dark fixed-top py-0">
+        <div class="container-fluid">
+          <a class="navbar-brand-light" href="index.html"> <img src="imagens/Logotipo.png" width="100" id="logo" alt="logotipo" > RememBrainMe</a>
+          <!-- Search -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <!-- Botão Modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a class="navbar-brand" href="login.blade.php"> <img src="imagens/paciente.png" width="30px" id="logo" alt="logotipo" >Login</a>
+          </button>
+          <!-- Botão off canvas -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+             
+            </div>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+
+  <main>
+    <Div class="">
+        <h2>
+            Nunca mais passe aperto com seus medicamentos
+        </h2>
+    </Div>
+    <Div class="card-cadastro ">
+        <div class="form_wrapper">
+            <div class="form_container">
+              <div class="title_container">
+                <h2>Responsive Registration Form</h2>
+              </div>
+              <div class="row clearfix">
+                <div class="">
+                  <form>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                      <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                      <input type="password" name="password" placeholder="Password" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                      <input type="password" name="password" placeholder="Re-type Password" required />
+                    </div>
+                    <div class="row clearfix">
+                      <div class="col_half">
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                          <input type="text" name="name" placeholder="First Name" />
+                        </div>
+                      </div>
+                      <div class="col_half">
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                          <input type="text" name="name" placeholder="Last Name" required />
+                        </div>
+                      </div>
+                    </div>
+                          <div class="input_field radio_option">
+                        <input type="radio" name="radiogroup1" id="rd1">
+                        <label for="rd1">Male</label>
+                        <input type="radio" name="radiogroup1" id="rd2">
+                        <label for="rd2">Female</label>
+                        </div>
+                        <div class="input_field select_option">
+                          <select>
+                            <option>Select a country</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                          <div class="select_arrow"></div>
+                        </div>
+                      <div class="input_field checkbox_option">
+                          <input type="checkbox" id="cb1">
+                          <label for="cb1">I agree with terms and conditions</label>
+                      </div>
+                      <div class="input_field checkbox_option">
+                          <input type="checkbox" id="cb2">
+                          <label for="cb2">I want to receive the newsletter</label>
+                      </div>
+                    <input class="button" type="submit" value="Register" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </Div>
+  </main>
+
+
+
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

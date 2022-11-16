@@ -29,8 +29,8 @@ Route::get('/clinicas', function () {
     return view('clinicas_prox');
 })->name('Clinicas');;
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/cadastro', function () {
+    return view('cadastro');
 });
 
 Route::get('/login', function () {

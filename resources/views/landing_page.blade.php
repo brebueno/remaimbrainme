@@ -22,7 +22,7 @@
   <header class="mb-5">
     <nav class="navbar bg-dark fixed-top py-0">
       <div class="container-fluid">
-        <a class="navbar-brand-light" href="index.html"> <img src="imagens/Logotipo.png" width="100" id="logo" alt="logotipo" > RememBrainMe</a>
+        <a class="navbar-brand-light" href="/"> <img src="imagens/Logotipo.png" width="100" id="logo" alt="logotipo" > RememBrainMe</a>
         <!-- Search -->
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -30,7 +30,7 @@
         </form>
         <!-- Botão Modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <a class="navbar-brand" href="login.blade.php"> <img src="imagens/paciente.png" width="30px" id="logo" alt="logotipo" >Login</a>
+          <a class="navbar-brand" href="login"> <img src="imagens/paciente.png" width="30px" id="logo" alt="logotipo" >Login</a>
         </button>
         <!-- Botão off canvas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
