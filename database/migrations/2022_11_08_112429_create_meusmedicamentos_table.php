@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('meusmedicamentos', function (Blueprint $table) {
+        Schema::create('medicamentos', function (Blueprint $table) {
             $table->id();
-            $table->text('nome');
-            $table->float('Dosagem_diaria');
-            $table->date('Duração_do_tratamento');
+            $table->text('nome_medicamento');
+            $table->float('dosagem');
+            $table->date('dt_inicio');
+            $table->date('dt_fim');
             $table->dateTime('horarios');
             $table->timestamps();
         });

@@ -65,7 +65,9 @@
     </nav>
   </header>
   <main>
-    Medicamentos
+    <div class="medicamentos">
+
+    </div>
   </main>
   <footer>
     <!-- place footer here -->

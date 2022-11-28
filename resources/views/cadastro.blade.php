@@ -14,12 +14,12 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
  <!--Css Da pag -->
- <link rel="stylesheet" href="{{ url('/cadastro') }}/cadastro.css">
+ <link rel="stylesheet" href="{{ url('/cadastro') }}/Style_c.css">
 
 </head>
 
-<body>
-  <header>
+<body class="cadastro mt-5">
+  <header class="header_cadastro mb-5">
     <nav class="navbar bg-dark fixed-top py-0">
         <div class="container-fluid">
           <a class="navbar-brand-light" href="index.html"> <img src="imagens/Logotipo.png" width="100" id="logo" alt="logotipo" > RememBrainMe</a>
@@ -69,75 +69,20 @@
         </div>
       </nav>
   </header>
-
-
-  <main>
-    <Div class="">
-        <h2>
-            Nunca mais passe aperto com seus medicamentos
-        </h2>
-    </Div>
-    <Div class="card-cadastro ">
-        <div class="form_wrapper">
-            <div class="form_container">
-              <div class="title_container">
-                <h2>Responsive Registration Form</h2>
-              </div>
-              <div class="row clearfix">
-                <div class="">
-                  <form>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                      <input type="email" name="email" placeholder="Email" required />
-                    </div>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                      <input type="password" name="password" placeholder="Password" required />
-                    </div>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                      <input type="password" name="password" placeholder="Re-type Password" required />
-                    </div>
-                    <div class="row clearfix">
-                      <div class="col_half">
-                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                          <input type="text" name="name" placeholder="First Name" />
-                        </div>
-                      </div>
-                      <div class="col_half">
-                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                          <input type="text" name="name" placeholder="Last Name" required />
-                        </div>
-                      </div>
-                    </div>
-                          <div class="input_field radio_option">
-                        <input type="radio" name="radiogroup1" id="rd1">
-                        <label for="rd1">Male</label>
-                        <input type="radio" name="radiogroup1" id="rd2">
-                        <label for="rd2">Female</label>
-                        </div>
-                        <div class="input_field select_option">
-                          <select>
-                            <option>Select a country</option>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                          </select>
-                          <div class="select_arrow"></div>
-                        </div>
-                      <div class="input_field checkbox_option">
-                          <input type="checkbox" id="cb1">
-                          <label for="cb1">I agree with terms and conditions</label>
-                      </div>
-                      <div class="input_field checkbox_option">
-                          <input type="checkbox" id="cb2">
-                          <label for="cb2">I want to receive the newsletter</label>
-                      </div>
-                    <input class="button" type="submit" value="Register" />
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-    </Div>
+  <main class="main_cadastro mt-5">
+    <section>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </section>
+   
   </main>
-
 
 
   <footer>
