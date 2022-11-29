@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="cadastro mt-5">
+<body class="cadastro">
   <header class="header_cadastro mb-5">
     <nav class="navbar bg-dark fixed-top py-0">
         <div class="container-fluid">
@@ -69,13 +69,38 @@
         </div>
       </nav>
   </header>
-  <main class="main_cadastro mt-5">
-    <section>
+  <main class="main_cadastro mt-5 pt-5">
+    <h2 class="text-center pt-3">
+      Nunca mais passe aperto com seus medicamentos
+    </h2>
+    <section class="mt-5">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <h5 class="card-title">Crie sua conta agora!</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Primeiro precisamos de alguns <br> dos seus pessoais</h6>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+          <label for="exampleFormControlInput1" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome*">
+
+          <label for="exampleFormControlInput1" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sobrenome*">
+
+          <label for="exampleFormControlInput1" class="form-label">Data de nascimento</label>
+          <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Dia/Mes/Ano">
+
+          <label for="exampleFormControlInput1" class="form-label">CPF</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="CPF*">
+
+          <label for="exampleFormControlInput1" class="form-label">Telefone</label>
+          <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="(12)93456-7891">
+
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="valdemar@gmail.com">
+
+          <label for="exampleFormControlInput1" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="valdemar@gmail.com">
+
           <a href="#" class="card-link">Card link</a>
           <a href="#" class="card-link">Another link</a>
         </div>
