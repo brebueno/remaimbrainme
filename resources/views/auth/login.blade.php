@@ -33,7 +33,10 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a href="{{ route('register')}}"> Não Possui conta? Registre-se </a>
+                {{-- <a href="{{ route('register')}}"> Não Possui conta? Registre-se </a> --}}
+                <x-jet-button class="ml-4">
+                    href="{{ route('register')}}"  {{ __('Não possui conta') }}
+                </x-jet-button>
                 &nbsp;
 
                 @if (Route::has('password.request'))

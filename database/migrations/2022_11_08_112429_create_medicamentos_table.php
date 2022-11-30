@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('medicamentos', function (Blueprint $table) {
             $table->id();
-            $table->text('nome_medicamento');
+            $table->text('nome');
             $table->float('dosagem');
             $table->date('dt_inicio');
             $table->date('dt_fim');

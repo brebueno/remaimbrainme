@@ -24,18 +24,33 @@
             </div>
 
             <div>
-                <x-jet-label for="data" value="{{ __('dt_nascimento') }}" />
-                <x-jet-input id="data" class="block mt-1 w-full" type="date" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-label for="data" value="{{ __('Data de nascimento') }}" />
+                <x-jet-input id="data" class="block mt-1 w-full" type="date" name="dt_nascimento" :value="old('dt_nascimento')" required autofocus autocomplete="name" />
             </div>
 
             <div>
                 <x-jet-label for="cpf" value="{{ __('cpf') }}" />
-                <x-jet-input id="number" class="block mt-1 w-full" type="number" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="cidade" value="{{ __('Cidade') }}" />
+                <x-jet-input id="cidade" class="block mt-1 w-full" type="text" name="cidade" :value="old('cidade')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="estado" value="{{ __('Estado') }}" />
+                <x-jet-input id="estado" class="block mt-1 w-full" type="text" name="estado" :value="old('estado')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="pais" value="{{ __('Pais') }}" />
+                <x-jet-input id="pais" class="block mt-1 w-full" type="text" name="pais" :value="old('pais')" required autofocus autocomplete="name" />
             </div>
 
             <div>
                 <x-jet-label for="telefone" value="{{ __('telefone') }}" />
-                <x-jet-input id="telefone" class="block mt-1 w-full" type="tel" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-input id="telefone" class="block mt-1 w-full" type="tel" name="telefone" :value="old('telefone')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">

@@ -33,6 +33,10 @@ Route::get('/cadastro', function () {
     return view('cadastro');
 })->name('cadastro');
 
+Route::get('/meus_medicamentos', function () {
+    return view('cadastro_remedio');
+})->name('meus_medicamentos');
+
  
 /*
 |--------------------------------------------------------------------------
