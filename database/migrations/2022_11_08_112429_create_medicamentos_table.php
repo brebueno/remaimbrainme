@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('medicamentos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->text('nome');
             $table->float('dosagem');
             $table->date('dt_inicio');

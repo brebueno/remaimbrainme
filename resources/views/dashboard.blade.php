@@ -12,6 +12,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 {{-- <x-jet-welcome /> --}}
                 --fazer o HTML do dashboard--
+                <a class="btn btn-primary" href="meus_medicamentos" role="button">Cadastro de Remédios</a>
             </div>
         </div>
     </div>

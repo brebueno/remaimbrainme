@@ -73,22 +73,39 @@
     <h2 class="text-center pt-3">
       Nunca mais passe aperto com seus medicamentos
     </h2>
-    <section class="mt-5">
-      <div class="card" style="width: 18rem;">
+    <section class="mt-5 justify-center ">
+      <div class="card" style="margin-left: 400px; margin-right: 400px">
         <div class="card-body">
-          <h5 class="card-title">Crie sua conta agora!</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Primeiro precisamos de alguns <br> dos seus pessoais</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">Insira aqui seu medicamento!</h5>
 
-          <label for="exampleFormControlInput1" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome*">
+          <label for="exampleFormControlInput1" class="form-label">Nome do Medicamento</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do Medicamento*">
 
-          <label for="exampleFormControlInput1" class="form-label">Sobrenome</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sobrenome*">
+          <label for="exampleFormControlInput1" class="form-label">Dosagem</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Dosagem*">
 
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <label for="exampleFormControlInput1" class="form-label">Inicio do Tratamento</label>
+          <input type="Date" class="form-control" id="exampleFormControlInput1" placeholder="Inicio do tratamento">
+
+          <label for="exampleFormControlInput1" class="form-label">Fim do tratamento</label>
+          <input type="Date" class="form-control" id="exampleFormControlInput1" placeholder="Fim do tratamento">
+
+          <label for="exampleFormControlInput1" class="form-label">Horario do Remédo</label>
+          <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Horario do Remédio">
+
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <label class="form-check-label" for="inlineCheckbox1">É de Uso continuo ?</label>
+
+          
+        <Div class="flex items-center justify-end mt-4">
+          <x-jet-button class="ml-4 btn btn-primary">
+            {{ __('Cadastre !') }}
+          </x-jet-button>
         </div>
+        </div>
+
+      
+
       </div>
     </section>
    
