@@ -14,7 +14,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
  <!--Css Da pag -->
- <link rel="stylesheet" href="{{ url('/cadastro') }}/Style_c.css">
+ <link rel="stylesheet" href="{{ url('/') }}/CSS/medicamentos.css">
 
 </head>
 
@@ -78,31 +78,33 @@
         <div class="card-body">
           <h5 class="card-title">Insira aqui seu medicamento!</h5>
 
+          <form method="POST" action="{{route('grava_remedio')}}">
+            @csrf
+
           <label for="exampleFormControlInput1" class="form-label">Nome do Medicamento</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do Medicamento*">
+          <input type="text" required class="form-control" id="nome" name="nome" placeholder="Nome do Medicamento*">
 
           <label for="exampleFormControlInput1" class="form-label">Dosagem</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Dosagem*">
+          <input type="text" required class="form-control" id="dosagem" name="dosagem" placeholder="Dosagem*">
 
           <label for="exampleFormControlInput1" class="form-label">Inicio do Tratamento</label>
-          <input type="Date" class="form-control" id="exampleFormControlInput1" placeholder="Inicio do tratamento">
+          <input type="Date" required class="form-control" id="dt_inicio" name="dt_inicio" placeholder="Inicio do tratamento">
 
           <label for="exampleFormControlInput1" class="form-label">Fim do tratamento</label>
-          <input type="Date" class="form-control" id="exampleFormControlInput1" placeholder="Fim do tratamento">
+          <input type="Date" class="form-control" id="dt_fim" name="dt_fim" placeholder="Fim do tratamento">
 
           <label for="exampleFormControlInput1" class="form-label">Horario do Remédo</label>
-          <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Horario do Remédio">
+          <input type="time" required class="form-control" id="horarios" name="horarios" placeholder="Horario do Remédio">
 
           <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
           <label class="form-check-label" for="inlineCheckbox1">É de Uso continuo ?</label>
 
           
-        <Div class="flex items-center justify-end mt-4">
-          <x-jet-button class="ml-4 btn btn-primary">
-            {{ __('Cadastre !') }}
-          </x-jet-button>
+          <button class="btn btn-primary form-control pt-5 mt-5" type="submit">Gravar</button>
+
         </div>
         </div>
+      </form>
 
       
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MovimentoController;
+use App\Http\Controllers\CadastroRemedio;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,59 +29,8 @@ Route::get('/clinicas', function () {
     return view('clinicas_prox');
 })->name('Clinicas');
 
-Route::get('/cadastro', function () {
-    return view('cadastro');
-})->name('cadastro');
-
-Route::get('/meus_medicamentos', function () {
-    return view('cadastro_remedio');
-})->name('meus_medicamentos');
-
- 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
- 
-/* Route::get('/', function () {
-    return view('auth.login');
-}); */
- 
-///////////// ROTAS PARA USUÁRIO LOGADO
- 
- 
- //App fin
- 
-/* Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-        //Rota Seus Dados
-    Route::get('/seus_dados', function () {
-        return view('seus_dados');
-    }
-    )->name('seus_dados');
- 
-    //Rota Nova Entrada - cadastro de receita ou despesa
-    Route::get('/nova_entrada', function () {
-        return view('nova_entrada');
-    }
-    )->name('nova_entrada');
- 
-    //Rota Seus Gastos - Gráfico de despesas X receitas
-    Route::get('/seus_gastos', function () {
-        return view('seus_gastos');
-    }
-    )->name('seus_gastos');
     
-    //Rota para inserção no BD dos movimentos - C do CRUD
+/*     //Rota para inserção no BD dos movimentos - C do CRUD
     Route::post('/processa', [MovimentoController::class, 'gravar'])->name('processa');
  
     //Rota extrato - READ R do CRUD
@@ -95,7 +44,7 @@ Route::get('/meus_medicamentos', function () {
     ->name('atualiza');
     //Rotas para o DELETE - D do CRUD - uma rota para o formulário de Deletar
     Route::delete('/deletar/{id}', [MovimentoController::class, 'deletar'] )->name('deletar');
-}); */
+}); */ 
 
 
 Route::middleware([
@@ -103,7 +52,20 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/cadastro_remedio', function () {
+        return view('cadastro_remedio');
+    })->name('cadastro_remedio');
+    
+    Route::get('/meus_medicamentos', function () {
+        return view('cadastro_remedio');
+    })->name('meus_medicamentos');
+    
+    /* Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->name('dashboard');  */
+
+    Route::post('/grava_remedio',[CadastroRemedio::class, 'gravar'] )->name('grava_remedio');
+
+    Route::get('/dashboard',[CadastroRemedio::class, 'get_medicamento'] )->name('dashboard');
+
 });

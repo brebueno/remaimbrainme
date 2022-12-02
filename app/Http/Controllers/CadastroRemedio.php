@@ -3,48 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-//Conexão com o model Fin_Movimento
-use App\Models\Fin_movimento;
+//Conexão com o model 
+use App\Models\Medicamento;
 
-class MovimentoController extends Controller
+class CadastroRemedio extends Controller
 {
     //Carrega os movimentos do usuário logado
-    public function get_movimentos(){
+    public function get_medicamento(){
         $user_id = auth()->user()->id;
         //Load registros onde o tipo=receita e user_id=$user_id
-        $receitas = Fin_movimento::where('user_id', $user_id)->where('tipo', 'receita')->get();
-        $despesas = Fin_movimento::where('user_id', $user_id)->where('tipo', 'despesa')->get();
-        $totReceitas = $receitas->sum('valor');
-        $totDespesas = $despesas->sum('valor');
+        $medicamentos = Medicamento::where('user_id', $user_id)->get();
+    
 
         $parametros = [
-            'totDespesas' => $totDespesas, 
-            'totReceitas' => $totReceitas, 
-            'receitas' => $receitas, 
-            'despesas' => $despesas
+            'medicamentos' => $medicamentos,
         ];
-
-        //carrega a VIEW extrato enviando as variáveis $despesas e $receitas
-        return view('extrato', $parametros);
+        dd($parametros);
+        //return view('dashboard', $parametros);
     }
     
     
     //Método gravar para armazenar o movimento
     public function gravar(Request $request){
-        //Instancia a tabela fin_movimentos
-        //$movimento representa a tabela e 
-        //$request representa os campos do formulário
-        $movimento = new Fin_movimento;
+        
+        $medicamento = new Medicamento;
 
-        $movimento->user_id = auth()->user()->id;
-        $movimento->descricao = $request->descricao;
-        $movimento->tipo = $request->tipo;
-        $movimento->valor = $request->valor;
+        $medicamento->id_user = auth()->user()->id;
+        $medicamento->nome = $request->nome;
+        $medicamento->dt_inicio = $request->dt_inicio;
+        $medicamento->dt_fim = $request->dt_fim;
+        $medicamento->dosagem = $request->dosagem;
+        $medicamento->horarios = $request->horarios;
+        $medicamento->continuo = $request->continuo;
 
-        $movimento->save();
+        $medicamento->save();
 
         //Após gravar os dados, redireciona para a rota "extrato"
-        return redirect('extrato');
+        return redirect('dashboard');
     }
 
     //Carrega o formulário de edição com os dados do registro

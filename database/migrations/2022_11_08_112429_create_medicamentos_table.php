@@ -18,10 +18,11 @@ return new class extends Migration
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users');
             $table->text('nome');
-            $table->float('dosagem');
+            $table->string('dosagem');
             $table->date('dt_inicio');
-            $table->date('dt_fim');
-            $table->dateTime('horarios');
+            $table->date('dt_fim')->nullable();
+            $table->time('horarios');
+            $table->boolean('continuo')->nullable();
             $table->timestamps();
         });
     }

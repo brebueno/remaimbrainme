@@ -15,6 +15,7 @@ class Medicamento extends Model
         'dt_inicio',
         'dt_fim',
         'horarios',
+        'continuo',
     ];
 
     public function user()
